@@ -10,7 +10,7 @@ public class SectionRunner {
         SpringApplication.run(
                 SectionRunner.class,
                 "--section=section01",
-                "--config=01-simple-consumer"
+                "--config=02-from-beginning"
         );
     }
 
