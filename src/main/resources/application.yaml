@@ -1,3 +1,3 @@
 spring:
-  application:
-    name: even-driven-playground
+  config:
+    import: ${section}/${config}.yaml
