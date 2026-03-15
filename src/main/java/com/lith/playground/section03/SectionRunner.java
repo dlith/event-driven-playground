@@ -9,7 +9,7 @@ public class SectionRunner {
     static class Consumer {
         public static void main(String[] args) {
             SpringApplication.run(
-                    Consumer.class, "--section=section03", "--config=01-consumer"
+                    Consumer.class, "--section=section03", "--config=03-message-consumer"
             );
         }
 
@@ -19,7 +19,7 @@ public class SectionRunner {
     static class Producer {
         public static void main(String[] args) {
             SpringApplication.run(
-                    Producer.class, "--section=section03", "--config=02-producer"
+                    Producer.class, "--section=section03", "--config=04-message-producer"
             );
         }
     }
