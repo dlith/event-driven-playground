@@ -1,0 +1,17 @@
+spring:
+  lifecycle:
+    timeout-per-shutdown-phase: 1s
+  cloud:
+    function:
+      definition: reactiveConsumer
+    stream:
+      bindings:
+        reactiveConsumer-in-0:
+          destination: demo-topic
+          group: demo-group
+      kafka:
+        binder:
+          brokers:
+            - localhost:9092
+          consumer-properties:
+            auto.offset.reset: earliest
