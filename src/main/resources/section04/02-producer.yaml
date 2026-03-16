@@ -1,0 +1,12 @@
+spring:
+  lifecycle:
+    timeout-per-shutdown-phase: 1s
+  cloud:
+    stream:
+      bindings:
+        ping-out:
+          destination: demo-topic
+      kafka:
+        binder:
+          brokers:
+            - localhost:9092

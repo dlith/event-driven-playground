@@ -3,11 +3,11 @@ spring:
     timeout-per-shutdown-phase: 1s
   cloud:
     function:
-      definition: messageConsumer
+      definition: consumer
     stream:
       bindings:
-        messageConsumer-in-0:
-          destination: demo-topic-new
+        consumer-in-0:
+          destination: demo-topic
           group: demo-group
       kafka:
         binder:
@@ -15,4 +15,3 @@ spring:
             - localhost:9092
           consumer-properties:
             auto.offset.reset: earliest
-            key.deserializer: org.apache.kafka.common.serialization.StringDeserializer
